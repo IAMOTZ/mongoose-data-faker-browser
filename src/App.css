@@ -133,3 +133,12 @@ div.footer div.content-wrap {
   left: 20%;
   width: 80%;
 }
+
+.evaluate-button {
+  display: flex;
+  vertical-align: middle;
+}
+
+.evaluate-button span {
+  margin-right: 5px;
+}
