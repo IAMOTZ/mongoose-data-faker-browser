@@ -77,9 +77,20 @@ div.controls button {
 }
 
 
-.runkitNotebook {
+.runkitNotebook-container {
   margin-top: 24px;
   margin-bottom: 90px;
+  min-height: 300px;
+}
+
+.runkitNotebook.hide {
+  display: hidden;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
 
 div.footer {

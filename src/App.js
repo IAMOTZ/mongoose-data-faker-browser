@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import ReactRunkit from 'react-runkit';
+import Spinner from './Spinner';
 import './App.css';
 
 // @todo: How can I have this in a different file
@@ -26,6 +27,7 @@ function App() {
   const embedRef = useRef(null);
 
   const [docsIsOpen, setDocsIsOpen] = useState(false);
+  const [displayNotebook, setDisplayNotebook] = useState(false);
 
   const evaluate = () => {
     embedRef.current.evaluate()
@@ -56,8 +58,13 @@ function App() {
             <button onClick={reset} className="btn btn-blue btn-link">Reset</button>
             <button id="open-docs" onClick={openDocs} className="btn btn-blue btn-link">Docs</button>
           </div>
-          <div className="runkitNotebook">
-            <ReactRunkit source={source} ref={embedRef} hidesActionButton />
+          <div className="runkitNotebook-container">
+            {!displayNotebook && <div className="spinner-container">
+              <Spinner/>
+            </div>}
+            <div className={`runkitNotebook ${!displayNotebook ? 'hide' : ''}`}>
+              <ReactRunkit source={source} ref={embedRef} onLoad={() => setDisplayNotebook(true)} hidesActionButton />
+            </div>
           </div>
         </div>
       </div>
