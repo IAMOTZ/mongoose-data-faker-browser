@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import ReactRunkit from "react-runkit";
 import ReactLoading from "react-loading";
+import Docs from "./Docs";
 import "./App.css";
 
 // @todo: How can I have this in a different file
@@ -52,12 +53,7 @@ function App() {
 
   return (
     <>
-      <div
-        id="docs-container"
-        className={`docs ${docsIsOpen ? "open" : "close"}`}
-      >
-        {/* Implement a close button withing the docs too */}
-      </div>
+      <Docs isOpen={docsIsOpen} close={closeDocs} />
       <div
         className="App"
         onClick={(event) => event.target.id !== "open-docs" && closeDocs()}

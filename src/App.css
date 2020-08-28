@@ -1,8 +1,9 @@
-
+/* @TODO: This is over doing it slef - I need to restrict it to where it's supposed to be */
 * {
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 }
+
 :root {
   --blackish-color: #6A737C;
   --custom-blue: #63ABED;
@@ -119,19 +120,22 @@ div.footer div.content-wrap {
 }
 
 .docs {
-  min-height: 100vh;
+  display: none;
   z-index: 2;
   position: absolute;
-  background-color: blue;
   left: 100%;
-  transition: left 0.5s;
-  transition-timing-function: ease-in;
-  display: hidden;
+  height: 100%;
+  min-height: 100vh;
+  overflow-y: scroll;
+  padding: 5px 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+
 .docs.open {
+  display: block;
   left: 20%;
-  width: 80%;
 }
 
 .evaluate-button {

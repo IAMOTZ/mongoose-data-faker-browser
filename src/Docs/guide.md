@@ -2,7 +2,7 @@
 Generate random fake data with your mongoose schema.
 
 ## Summary
-- How to use it
+- How to `use` it
 - SchemaType options
 - Using FakerJS
 - Limitations
@@ -11,7 +11,7 @@ Generate random fake data with your mongoose schema.
 
 ## How to use it
 1. Require the necessary packages.
-```NodeJS
+```javascript
 const { generate, runkitJSONView } = require('mongoose-random-data'); 
 const { Schema } = require('mongoose');
 ```
