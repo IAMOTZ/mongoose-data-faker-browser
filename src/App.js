@@ -48,6 +48,13 @@ function App() {
     // figure out a way to re-render the default source
   };
 
+  const setNoteBookWidth = () => {
+    const runkitIframe = document.querySelector('iframe[name="runkit-embed-0"]');
+    if(!runkitIframe) return;
+    runkitIframe.style.width = '100%';
+    runkitIframe.style.marginLeft = "0";
+  }
+
   const openDocs = () => setDocsIsOpen(true);
   const closeDocs = () => setDocsIsOpen(false);
 
@@ -112,7 +119,7 @@ function App() {
                 <ReactRunkit
                   source={source}
                   ref={embedRef}
-                  onLoad={() => setDisplayNotebook(true)}
+                  onLoad={() => { setDisplayNotebook(true); setNoteBookWidth(); }}
                   onEvaluate={() => { setIsGenerating(false); scrollToResult(); }}
                   hidesActionButton
                 />
