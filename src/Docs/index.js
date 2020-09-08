@@ -3,7 +3,9 @@ import { Remarkable } from "remarkable";
 import styled from "styled-components";
 import hljs from "highlight.js";
 import "highlight.js/styles/solarized-light.css";
-import guide from "./guide.md";
+import contentURI from "./content.md";
+
+
 
 // @todo: I need to chose one of using external style files or styled components
 const DocsCloseButton = styled.span`
@@ -24,7 +26,7 @@ export default ({ isOpen, close }) => {
 
   if (!docsContent) {
     window
-      .fetch(guide)
+      .fetch(contentURI)
       .then((res) => res.text())
       .then((content) => setDocsContent(content))
       .catch((err) => console.log(err));

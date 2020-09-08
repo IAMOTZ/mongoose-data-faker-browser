@@ -2,7 +2,7 @@
 Generate random fake data with your mongoose schema.
 
 ## Summary
-- How to `use` it
+- How to use it
 - SchemaType options
 - Using FakerJS
 - Limitations
