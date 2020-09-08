@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Remarkable } from "remarkable";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+import { slideInRight } from 'react-animations'
 import hljs from "highlight.js";
 import "highlight.js/styles/solarized-light.css";
 import contentURI from "./content.md";
-
 
 
 // @todo: I need to chose one of using external style files or styled components
@@ -19,6 +19,12 @@ const DocsCloseButton = styled.span`
 
 const DocsContent = styled.div`
   position: relative;
+`;
+
+const slideInAnimation = keyframes`${slideInRight}`;
+ 
+const SlideInDiv = styled.div`
+  animation: 1s ${slideInAnimation};
 `;
 
 export default ({ isOpen, close }) => {
@@ -53,7 +59,7 @@ export default ({ isOpen, close }) => {
   };
 
   return (
-    <div className={`docs ${isOpen ? "open" : "close"}`}>
+    <SlideInDiv className={`docs ${isOpen ? "open" : "close"}`}>
       <DocsContent>
         <div dangerouslySetInnerHTML={content} className="markdown-body"></div>
         <DocsCloseButton className="close-button" onClick={close}>
@@ -72,6 +78,6 @@ export default ({ isOpen, close }) => {
           </svg>
         </DocsCloseButton>
       </DocsContent>
-    </div>
+    </SlideInDiv>
   );
 };
