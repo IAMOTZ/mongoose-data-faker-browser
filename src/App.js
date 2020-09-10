@@ -91,9 +91,9 @@ function App() {
                   </>
                 )}
               </button>
-              <button onClick={reset} className="btn btn-blue btn-link">
+              {/* <button onClick={reset} className="btn btn-blue btn-link">
                 Reset
-              </button>
+              </button> */}
               <button
                 id="open-docs"
                 onClick={openDocs}
