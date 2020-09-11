@@ -7,7 +7,7 @@ import "./App.css";
 // @todo: How can I have this in a different file
 const source =
   `` +
-  `const { generate, runkitJSONView } = require('mongoose-random-data')
+  `const { generate, runkitJSONView } = require('mongoose-data-faker')
 
 const { Schema } = require('mongoose');
 

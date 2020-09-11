@@ -16,10 +16,10 @@ By default, the web app should load a default script to generate data for a simp
 
 1. Require the necessary modules from the core package:
 ```javascript
-const { generate, runkitJSONView } = require('mongoose-random-data'); 
+const { generate, runkitJSONView } = require('mongoose-data-faker'); 
 ```
 
-More details about the `mongoose-random-data` package [here](https://www.npmjs.com/package/mongoose-random-data).
+More details about the `mongoose-data-faker` package [here](https://www.npmjs.com/package/mongoose-data-faker).
 
 2. Compose your schema
 ```javascript
