@@ -78,8 +78,8 @@ function App() {
                 disabled={isGenerating}
                 className="btn btn-blue btn-link evaluate-button"
               >
-                {!isGenerating && <span>Generate</span>}
-                {isGenerating && (
+                <span>Generate</span>
+                {/* {isGenerating && (
                   <>
                     <span>Running</span>
                     <ReactLoading
@@ -89,7 +89,7 @@ function App() {
                       width={12}
                     />
                   </>
-                )}
+                )} */}
               </button>
               {/* <button onClick={reset} className="btn btn-blue btn-link">
                 Reset
@@ -120,7 +120,7 @@ function App() {
                   source={source}
                   ref={embedRef}
                   onLoad={() => { setDisplayNotebook(true); setNoteBookWidth(); }}
-                  onEvaluate={() => { setIsGenerating(false); scrollToResult(); }}
+                  // onEvaluate={() => { setIsGenerating(false); scrollToResult(); }}
                   hidesActionButton
                 />
                 <div ref={resultScrollGuideRef}></div>
