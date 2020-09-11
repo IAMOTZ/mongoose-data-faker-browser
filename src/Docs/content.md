@@ -1,13 +1,6 @@
 # Mongoose Data Faker
 Generate random fake data with your mongoose schema.  
-> This is a browser wrapper around the core package that handles the actual data generation. Feel free to install and use the core package on your local machine.
-
-## Summary
-- [Usage](#usage)
-- [SchemaType options](#schematype-options)
-- [Using FakerJS](#using-fakerjs)
-- [Limitations](#limitations)
-- [Contribution](#contribution)
+> This is a browser wrapper around the [core package](https://www.npmjs.com/package/mongoose-data-faker) that handles the actual data generation. Feel free to install and use the core package on your local machine.
 
 ## Usage  
 This project uses RunKit to execute your NodeJS code; Runkit is an online NodeJS playground with every version of every package on npm pre-installed, read more about it [here](https://runkit.com/home).
@@ -111,10 +104,10 @@ Mongoose-data-faker currently does not support generation for custom schema type
 Mongoose-data-faker is built and tested with mongoose version `5.9.24`, I would continuously test for backward compatibility with older versions and update this space.
 
 ## Contribution
-The project source code is available on [Github](https://github.com/IAMOTZ/mongoose-data-faker-browser). Contributions are highly welcomed. Feel free to also contribute to the core package whose source code is available here.
+The project source code is available on [Github](https://github.com/IAMOTZ/mongoose-data-faker-browser). Contributions are highly welcomed. Feel free to also contribute to the core package whose source code is available [here](https://www.npmjs.com/package/mongoose-data-faker).
 I strongly advise we discuss an issue via Github Issues before you go ahead to raise a Pull Request. To contribute:
 
-- Fork this repository
-- Create a new branch for your contribution in the forked repo, ensure you check out from the develop branch.
+- Fork the repository
+- Create a new branch for your contribution in the forked repo
 - Commit your changes with detailed commit messages
 - Raise a pull request from your forked repository to the main repository.
