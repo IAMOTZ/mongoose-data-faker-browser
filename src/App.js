@@ -33,11 +33,8 @@ function App() {
   const [docsIsOpen, setDocsIsOpen] = useState(false);
   const [displayNotebook, setDisplayNotebook] = useState(false);
 
-  const [isGenerating, setIsGenerating] = useState(false);
-
   const evaluate = () => {
     embedRef.current.evaluate();
-    setIsGenerating(true);
   };
 
   const scrollToResult = () => {
@@ -75,21 +72,9 @@ function App() {
             <div className="controls">
               <button
                 onClick={evaluate}
-                disabled={isGenerating}
                 className="btn btn-blue btn-link evaluate-button"
               >
                 <span>Generate</span>
-                {/* {isGenerating && (
-                  <>
-                    <span>Running</span>
-                    <ReactLoading
-                      type={"spinningBubbles"}
-                      color={"var(--text-white)"}
-                      height={12}
-                      width={12}
-                    />
-                  </>
-                )} */}
               </button>
               {/* <button onClick={reset} className="btn btn-blue btn-link">
                 Reset
@@ -120,7 +105,7 @@ function App() {
                   source={source}
                   ref={embedRef}
                   onLoad={() => { setDisplayNotebook(true); setNoteBookWidth(); }}
-                  // onEvaluate={() => { setIsGenerating(false); scrollToResult(); }}
+                  onEvaluate={() => scrollToResult()}
                   hidesActionButton
                 />
                 <div ref={resultScrollGuideRef}></div>
