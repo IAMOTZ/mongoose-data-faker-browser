@@ -1,5 +1,5 @@
 {
-  "name": "mrd-browser",
+  "name": "mongoose-data-faker-browser",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

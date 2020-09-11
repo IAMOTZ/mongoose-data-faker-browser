@@ -111,7 +111,7 @@ Mongoose-data-faker currently does not support generation for custom schema type
 Mongoose-data-faker is built and tested with mongoose version `5.9.24`, I would continuously test for backward compatibility with older versions and update this space.
 
 ## Contribution
-The project source code is available on [Github](https://github.com/IAMOTZ/mrd-browser). Contributions are highly welcomed. Feel free to also contribute to the core package whose source code is available here.
+The project source code is available on [Github](https://github.com/IAMOTZ/mongoose-data-faker-browser). Contributions are highly welcomed. Feel free to also contribute to the core package whose source code is available here.
 I strongly advise we discuss an issue via Github Issues before you go ahead to raise a Pull Request. To contribute:
 
 - Fork this repository

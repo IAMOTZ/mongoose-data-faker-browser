@@ -134,7 +134,7 @@ function App() {
               Source code is available on{" "}
               <a
                 className="source-code-link"
-                href="https://github.com/IAMOTZ/mrd-browser"
+                href="https://github.com/IAMOTZ/mongoose-data-faker-browser"
               >
                 Github
               </a>
