@@ -1,8 +1,14 @@
 import React, { useRef, useState } from "react";
 import ReactRunkit from "react-runkit";
 import ReactLoading from "react-loading";
+import GitHubButton from "react-github-btn";
 import Docs from "./Docs";
+import styled from "styled-components";
 import "./App.css";
+
+const GitButtonWrap = styled.span`
+  margin-left: 10px;
+`;
 
 // @todo: How can I have this in a different file
 const source =
@@ -39,18 +45,20 @@ function App() {
 
   const scrollToResult = () => {
     resultScrollGuideRef.current.scrollIntoView(false);
-  }
+  };
 
   const reset = () => {
     // figure out a way to re-render the default source
   };
 
   const setNoteBookWidth = () => {
-    const runkitIframe = document.querySelector('iframe[name="runkit-embed-0"]');
-    if(!runkitIframe) return;
-    runkitIframe.style.width = '100%';
+    const runkitIframe = document.querySelector(
+      'iframe[name="runkit-embed-0"]'
+    );
+    if (!runkitIframe) return;
+    runkitIframe.style.width = "100%";
     runkitIframe.style.marginLeft = "0";
-  }
+  };
 
   const openDocs = () => setDocsIsOpen(true);
   const closeDocs = () => setDocsIsOpen(false);
@@ -104,7 +112,10 @@ function App() {
                 <ReactRunkit
                   source={source}
                   ref={embedRef}
-                  onLoad={() => { setDisplayNotebook(true); setNoteBookWidth(); }}
+                  onLoad={() => {
+                    setDisplayNotebook(true);
+                    setNoteBookWidth();
+                  }}
                   onEvaluate={() => scrollToResult()}
                   hidesActionButton
                 />
@@ -124,6 +135,28 @@ function App() {
                 Github
               </a>
             </p>
+            <GitButtonWrap>
+              <GitHubButton
+                href="https://github.com/IAMOTZ/mongoose-data-faker-browser"
+                data-color-scheme="no-preference: light; light: light; dark: light;"
+                data-size="large"
+                data-show-count="true"
+                aria-label="Star IAMOTZ/mongoose-data-faker-browser on GitHub"
+                className="github-star-button"
+              >
+                Star
+              </GitHubButton>
+            </GitButtonWrap>
+            <GitButtonWrap>
+              <GitHubButton
+                href="https://github.com/IAMOTZ/mongoose-data-faker-browser/issues"
+                data-color-scheme="no-preference: light; light: light; dark: light;"
+                data-size="large"
+                aria-label="Issue IAMOTZ/mongoose-data-faker-browser on GitHub"
+              >
+                Issue
+              </GitHubButton>
+            </GitButtonWrap>
           </div>
         </div>
       </div>

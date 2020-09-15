@@ -110,6 +110,7 @@ div.footer div.content-wrap {
   display: flex;
   justify-content: center;
   align-content: center;
+  align-items: center;
 }
 
 .source-code-link {
