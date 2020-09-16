@@ -1,4 +1,4 @@
-# Mongoose Data Faker
+# Mongoose Data Faker - Browser
 Generate random fake data with your mongoose schema. Hosted application is available [here](https://mongoose-data-faker.herokuapp.com/).
 > This is a browser wrapper around the [core package](https://www.npmjs.com/package/mongoose-data-faker) that handles the actual data generation. Feel free to install and use the core package on your local machine.
 
