@@ -9,8 +9,7 @@ Generate random fake data with your mongoose schema. Hosted application is avail
 - Run `yarn start` to run the app in the development mode. The application should be accessible at `http://localhost:3000`
 
 ## Contribution
-Contributions are highly welcomed. Feel free to also contribute to the core package whose source code is available [here](https://www.npmjs.com/package/mongoose-data-faker).
-I strongly advise we discuss an issue via Github Issues before you go ahead to raise a Pull Request. To contribute:
+Contributions are highly welcomed. Feel free to also contribute to the core package whose source code is available [here](https://github.com/IAMOTZ/mongoose-data-faker).
 
 - Fork the repository
 - Create a new branch for your contribution in the forked repo
