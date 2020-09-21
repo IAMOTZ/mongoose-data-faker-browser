@@ -47,10 +47,6 @@ function App() {
     resultScrollGuideRef.current.scrollIntoView(false);
   };
 
-  const reset = () => {
-    // figure out a way to re-render the default source
-  };
-
   const setNoteBookWidth = () => {
     const runkitIframe = document.querySelector(
       'iframe[name="runkit-embed-0"]'
@@ -84,9 +80,6 @@ function App() {
               >
                 <span>Generate</span>
               </button>
-              {/* <button onClick={reset} className="btn btn-blue btn-link">
-                Reset
-              </button> */}
               <button
                 id="open-docs"
                 onClick={openDocs}
