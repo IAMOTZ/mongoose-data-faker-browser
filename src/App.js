@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Docs from "./components/Docs";
 import Runkit from "./components/Runkit";
 import Footer from "./components/Footer";
-import "./App.css";
 
 function App() {
   const [docsIsOpen, setDocsIsOpen] = useState(false);
