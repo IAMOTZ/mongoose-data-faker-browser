@@ -1,33 +1,13 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import { Remarkable } from "remarkable";
-import styled, { keyframes } from "styled-components";
-import { slideInRight } from 'react-animations'
 import hljs from "highlight.js";
 import "highlight.js/styles/solarized-light.css";
 import contentURI from "./content.md";
+import * as Styled from './styled';
 
 
-// @todo: I need to chose one of using external style files or styled components
-const DocsCloseButton = styled.span`
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  height: 45px;
-  width: 45px;
-  cursor: pointer;
-`;
-
-const DocsContent = styled.div`
-  position: relative;
-`;
-
-const slideInAnimation = keyframes`${slideInRight}`;
- 
-const SlideInDiv = styled.div`
-  animation: 1s ${slideInAnimation};
-`;
-
-export default ({ isOpen, close }) => {
+const Docs = ({ isOpen, close }) => {
   const [docsContent, setDocsContent] = useState("");
 
   if (!docsContent) {
@@ -59,10 +39,10 @@ export default ({ isOpen, close }) => {
   };
 
   return (
-    <SlideInDiv className={`docs ${isOpen ? "open" : "close"}`}>
-      <DocsContent>
+    <Styled.SlideInDiv className={`docs ${isOpen ? "open" : "close"}`}>
+      <Styled.DocsContentWrap>
         <div dangerouslySetInnerHTML={content} className="markdown-body"></div>
-        <DocsCloseButton className="close-button" onClick={close}>
+        <Styled.DocsCloseButton className="close-button" onClick={close}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -76,8 +56,15 @@ export default ({ isOpen, close }) => {
               d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-        </DocsCloseButton>
-      </DocsContent>
-    </SlideInDiv>
+        </Styled.DocsCloseButton>
+      </Styled.DocsContentWrap>
+    </Styled.SlideInDiv>
   );
 };
+
+Docs.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  close: PropTypes.func.isRequired,
+};
+
+export default Docs;
